@@ -1,0 +1,9 @@
+.home_main{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  

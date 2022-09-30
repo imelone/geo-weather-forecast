@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: center;
+    padding: 1px;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: black;
+  }
+  .logo{
+    width:3.5rem;
+    padding-left:1rem;
+  }
