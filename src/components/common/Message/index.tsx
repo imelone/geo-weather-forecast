@@ -1,9 +1,9 @@
-import './style.css';
+import style from './style.module.css';
 
 interface IMessageProps {
   text: string;
 }
 
 export const Message: React.FC<IMessageProps> = (props: IMessageProps) => {
-  return <div className='message'>{props.text}</div>;
+  return <div className={style.message}>{props.text}</div>;
 };

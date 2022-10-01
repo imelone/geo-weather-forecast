@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import style from './style.module.css';
 
 interface ICardProps {
   date: number | string;
@@ -68,34 +68,34 @@ export const Card: React.FC<ICardProps> = (props: ICardProps) => {
     secondSubtitle: string,
     secodDescription: string
   ): JSX.Element => (
-    <div className='card__row'>
-      <div className='card__col'>
-        <h4 className='card__col__item'>{firstSubtitle}</h4>
-        <p className='card__col__item'>{firstDescription}</p>
+    <div className={style.cardRow}>
+      <div className={style.cardCol}>
+        <h4 className={style.cardColItem}>{firstSubtitle}</h4>
+        <p className={style.cardColItem}>{firstDescription}</p>
       </div>
-      <div className='card__col'>
-        <h4 className='card__col__item'>{secondSubtitle}</h4>
-        <p className='card__col__item'>{secodDescription}</p>
+      <div className={style.cardCol}>
+        <h4 className={style.cardColItem}>{secondSubtitle}</h4>
+        <p className={style.cardColItem}>{secodDescription}</p>
       </div>
     </div>
   );
 
   return (
     <div className='card'>
-      <div className='card__row__title__image'>
-        <div className='card__row__title'>
+      <div className={style.cardRowTitleImage}>
+        <div className={style.cardRowTitle}>
           <h2>{setCardTitle()}</h2>
         </div>
 
         <img
-          className='car__row__image'
+          className={style.carRowImage}
           src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
           alt='weather forecast logo'
         />
-        <h1 className='car__row__temp'>{formatData(tempeture, 'temperature')}</h1>
+        <h1 className={style.cardRowTemp}>{formatData(tempeture, 'temperature')}</h1>
       </div>
-      <div className='card__row__values'>
-        <div className='card__row__values__group'>
+      <div className={style.cardRowValues}>
+        <div className={style.cardRowGroup}>
           {renderRowCardDescription(
             'Sensación Térmica',
             formatData(feelsLike, 'temperature'),
@@ -103,7 +103,7 @@ export const Card: React.FC<ICardProps> = (props: ICardProps) => {
             formatData(humidity, 'percentage')
           )}
         </div>
-        <div className='card__row__values__group'>
+        <div className={style.cardRowGroup}>
           {clouds !== undefined
             ? renderRowCardDescription(
                 'Nubosidad',
@@ -118,7 +118,7 @@ export const Card: React.FC<ICardProps> = (props: ICardProps) => {
                 formatData(pressure, 'pressure')
               )}
         </div>
-        <div className='card__row__values__group'>
+        <div className={style.cardRowGroup}>
           {renderRowCardDescription(
             'Velocidad del viento',
             formatData(windSpeed, 'speed'),

@@ -1,4 +1,4 @@
-import './style.css';
+import style from './style.module.css';
 
 interface IHeaderProps {
   title: string;
@@ -8,9 +8,9 @@ interface IHeaderProps {
 export const Header: React.FC<IHeaderProps> = (props: IHeaderProps) => {
   const { title, logo } = props;
   return (
-    <header className='header'>
+    <header className={style.header}>
       <h1>{title}</h1>
-      <img className='logo' src={logo} alt='logo' />
+      <img className={style.logo} src={logo} alt='logo' />
     </header>
   );
 };
