@@ -6,6 +6,6 @@ describe('<Spinner />', () => {
   test('renders component', () => {
     const component = render(<Spinner />);
     expect(component.container.getElementsByClassName('center')).toHaveLength(1);
-    expect(component.container.getElementsByClassName('lds__roller')).toHaveLength(1);
+    expect(component.container.getElementsByClassName('ldsRoller')).toHaveLength(1);
   });
 });

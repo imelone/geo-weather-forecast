@@ -1,0 +1,26 @@
+.ErrorPageMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .ErrorPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  
+  .ErrorPageContainerTitle {
+    margin: 0;
+  }
+  
+  .ErrorPageButton {
+    cursor: pointer;
+    border: 1px solid #10c293;
+    background-color: #d5f4e6;
+    padding: 4px;
+    font-size: 1rem;
+  }
