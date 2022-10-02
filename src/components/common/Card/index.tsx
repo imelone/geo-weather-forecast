@@ -63,25 +63,25 @@ export const Card: React.FC<ICardProps> = (props: ICardProps) => {
   };
 
   const renderRowCardDescription = (
-    firstSubtitle: string,
-    firstDescription: string,
-    secondSubtitle: string,
-    secodDescription: string
+    leftSubtitle: string,
+    leftDescription: string,
+    rightSubtitle: string,
+    rightDescription: string
   ): JSX.Element => (
     <div className={style.cardRow}>
       <div className={style.cardCol}>
-        <h4 className={style.cardColItem}>{firstSubtitle}</h4>
-        <p className={style.cardColItem}>{firstDescription}</p>
+        <h4 className={style.cardColItem}>{leftSubtitle}</h4>
+        <p className={style.cardColItem}>{leftDescription}</p>
       </div>
       <div className={style.cardCol}>
-        <h4 className={style.cardColItem}>{secondSubtitle}</h4>
-        <p className={style.cardColItem}>{secodDescription}</p>
+        <h4 className={style.cardColItem}>{rightSubtitle}</h4>
+        <p className={style.cardColItem}>{rightDescription}</p>
       </div>
     </div>
   );
 
   return (
-    <div className='card'>
+    <div className={style.card}>
       <div className={style.cardRowTitleImage}>
         <div className={style.cardRowTitle}>
           <h2>{setCardTitle()}</h2>
