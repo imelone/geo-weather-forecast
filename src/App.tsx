@@ -1,12 +1,16 @@
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
+import { ErrorPage } from './pages/ErrorPage';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className='App'>
-      <Home />
-    </div>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route
+        path='*'
+        element={<ErrorPage title='404' description='Página no encontrada' buttonText='Volver al inicio' />}
+      />
+    </Routes>
   );
-}
-
+};
 export default App;
