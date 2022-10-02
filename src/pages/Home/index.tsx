@@ -74,7 +74,7 @@ export const Home: React.FC = () => {
           <section className={style.homeLoader}>
             <Spinner />
           </section>
-        ) : current != null && !error ? (
+        ) : current != null ? (
           <>
             <section className={style.homeToday}>
               <Card
@@ -91,10 +91,12 @@ export const Home: React.FC = () => {
               />
               <h2>{extendedForecastTitle}</h2>
             </section>
-            <section className={style.homeExtendedForecast}>{renderExtendedWeatherForecast()}</section>{' '}
+            <section className={style.homeExtendedForecast}>{renderExtendedWeatherForecast()}</section>
           </>
+        ) : error ? (
+          <Message text={'Ha ocurrido un error, el servicio no se encuentra dispoible por el momento'} />
         ) : (
-          <Message text={error} />
+          ''
         )}
       </main>
       <Footer footerCopyrightText={footerCopyrightText} />

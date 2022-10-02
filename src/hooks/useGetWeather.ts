@@ -42,6 +42,7 @@ const useGetWeather = (cityCoordinates: ICoordinates): IUseGetWeatherResponse =>
         .then((res: AxiosResponse<IGetWeatherResponse>) => {
           setLoading(false);
           setWeatherData(res.data);
+          setError('');
         })
         .catch((err: IError) => {
           setLoading(false);
