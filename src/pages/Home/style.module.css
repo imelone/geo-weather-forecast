@@ -5,12 +5,14 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin: 0 auto;
+   
   }
   .homeToday{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width:100%;
   }
   .homeExtendedForecast{
     display: flex;

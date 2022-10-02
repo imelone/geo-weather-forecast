@@ -82,11 +82,10 @@ export const Card: React.FC<ICardProps> = (props: ICardProps) => {
 
   return (
     <div className={style.card}>
-      <div className={style.cardRowTitleImage}>
-        <div className={style.cardRowTitle}>
-          <h2>{setCardTitle()}</h2>
-        </div>
-
+      <div className={style.cardRowTitle}>
+        <h2>{setCardTitle()}</h2>
+      </div>
+      <div className={style.cardRow}>
         <img
           className={style.carRowImage}
           src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
@@ -94,38 +93,31 @@ export const Card: React.FC<ICardProps> = (props: ICardProps) => {
         />
         <h1 className={style.cardRowTemp}>{formatData(tempeture, 'temperature')}</h1>
       </div>
-      <div className={style.cardRowValues}>
-        <div className={style.cardRowGroup}>
-          {renderRowCardDescription(
-            'Sensación Térmica',
-            formatData(feelsLike, 'temperature'),
-            'Humedad',
-            formatData(humidity, 'percentage')
-          )}
-        </div>
-        <div className={style.cardRowGroup}>
-          {clouds !== undefined
-            ? renderRowCardDescription(
-                'Nubosidad',
-                formatData(clouds, 'percentage'),
-                'Presion',
-                formatData(pressure, 'pressure')
-              )
-            : renderRowCardDescription(
-                'Probabilidad de lluvia',
-                formatData(rainPosibility! * 100, 'percentage'),
-                'Presion',
-                formatData(pressure, 'pressure')
-              )}
-        </div>
-        <div className={style.cardRowGroup}>
-          {renderRowCardDescription(
-            'Velocidad del viento',
-            formatData(windSpeed, 'speed'),
-            'Índice UV',
-            formatData(uvi)
-          )}
-        </div>
+      <div className={style.cardRowGroup}>
+        {renderRowCardDescription(
+          'Sensación Térmica',
+          formatData(feelsLike, 'temperature'),
+          'Humedad',
+          formatData(humidity, 'percentage')
+        )}
+      </div>
+      <div className={style.cardRowGroup}>
+        {clouds !== undefined
+          ? renderRowCardDescription(
+              'Nubosidad',
+              formatData(clouds, 'percentage'),
+              'Presion',
+              formatData(pressure, 'pressure')
+            )
+          : renderRowCardDescription(
+              'Probabilidad de lluvia',
+              formatData(rainPosibility! * 100, 'percentage'),
+              'Presion',
+              formatData(pressure, 'pressure')
+            )}
+      </div>
+      <div className={style.cardRowGroup}>
+        {renderRowCardDescription('Velocidad del viento', formatData(windSpeed, 'speed'), 'Índice UV', formatData(uvi))}
       </div>
     </div>
   );

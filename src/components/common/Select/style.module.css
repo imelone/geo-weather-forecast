@@ -6,11 +6,12 @@
     height: 3rem;
     font-size: 1.7rem;
     color: #000000;
-    width: 700px;
-    background-color:#d5f4e6;;
+    width: 350px;
+    background-color:#d5f4e6;
+    flex-shrink: 2;
 }
 .selectOption{
     display: flex;
     text-align: center;
-    width: 700px;
+    width: 350px;
 }
